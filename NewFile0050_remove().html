@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+remove() : 문서 객체를 제거합니다
+ -->
+<script>
+ $(document).ready(function (){
+		$('div>div').first().remove(); //div의 자식 중 첫번째 문서 객체를 제거합니다 
+	})
+</script>
+
+</head>
+<body>
+	<div>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+	</div>
+</body>
+</html>

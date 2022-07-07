@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1 id='target1'>'#target1'</h1>
+	<h1>Header-2</h1>
+
+	<script>
+		$(document).ready(function() {
+			var selectColor = prompt("target1을 어떤 색상으로 바꿀까요", "");
+
+			$('#target1').css('color', selectColor);
+		});
+	</script>
+</body>
+</html>

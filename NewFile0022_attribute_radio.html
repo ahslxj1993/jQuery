@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<!-- 
+형식)
+attr() : 속성의 값을 구해오거나 값을 설정합니다
+1. attr(속성명) - 속성에 해당하는 속성값을 구해옵니다
+2. attr(속성명, 속성값) - 속성에 해당하는 속성값을 설정합니다
+3. attr(속성명, function(index, attrValue){}) 
+ -->
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function () {
+	setTimeout(function () {
+		var imagepath = $('input:checked').val();
+		alert('선택한 그림의 위치는 '+imagepath+" 입니다.");
+		$('img').attr('src',imagepath);
+	}, 5000)
+});
+</script>
+</head>
+<body>
+<h3>선택한 그림 위치 출력</h3>
+<hr>
+<div>radio 버튼을 클릭하세요</div>
+<img src='img/koala.jpg' width="100px" height="100px"><br>
+<form>
+	<input type="radio" name="icon" value="img/image1.png">image1<br>
+	<input type="radio" name="icon" value="img/image2.png">image2<br>
+	<input type="radio" name="icon" value="img/image3.png">image3<br>
+</form>
+</body>
+</html>

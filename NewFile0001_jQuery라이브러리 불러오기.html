@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 
+jQuery  불러오는 방법
+
+1. CDN 방식으로 가장 최신버전을 불러옵니다
+CDN (Content Delivery Network)은 사용자에게 간편하게 콘텐츠를 제공하는 방식으로 네트워크에 데이터를 저장하여 제공하는 시스템입니다
+ -->
+ 
+ <script src="https://code.jquery.com/jquery-latest.js"></script>
+ 
+ <!-- 
+ 2. 직접 내려받아 설치한 경우 불러옵니다
+ 
+ 	다운받는 사이트 : http://code.jquery.com/ 접속
+ 	3.x 버전  선택 후 오른쪽 마우스 버튼 틀릭후 '다른이름으로 링크 저장'
+ 	또는 '다른이름으로 대상저장' 선택
+ 	
+ 	jQuery ㅍ ㅏ일명은
+ 	3.x.js 파일(uncompressed버전), 3.x.min.js(minified버전 - 파일의 용량을 최소하 하기 위해 코드가 모드 붙어있다)
+  -->
+  
+  <script src='../js/jquery-3.6.0.js'></script>
+  <script>
+  /*
+  
+  1.jQuery(elemet) : element를 jQuery 객체로 만듭니다
+  2.ready(function) : DOM이 완전히 로드 되었을때 function을 실행합니다
+  3.jQuery() 대신 $()를 사용할수 있습니다
+  		작성법)
+  		1.$(document).ready();
+  		2. 1번 작성 후 ready()의 ()사이에 커서를 놓습니다
+  		3. function(){}를 작성 후 {}사이에 커서를 놓고 엔터를 누른뒤 코드작성 합니다.
+ 				 =>문서가 준비되면 매개변수로 넣은 콜백 함수를 실행하라는 의미입니다.
+  
+  */
+  
+  jQuery(document).ready(function(){
+	  console.log("hello jQuery");
+  })
+  
+  $(document).ready(function () {
+	  console.log('hello $');
+  })
+  </script>
+</head>
+<body>
+
+</body>
+</html>

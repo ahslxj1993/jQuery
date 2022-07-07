@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function () {
+	setTimeout(function () {
+		var menu = $('option:checked').val();
+		//var menu = $('select').val();
+		alert('선택한 메뉴는 '+menu+" 입니다.")
+	}, 5000)
+});
+</script>
+</head>
+<body>
+5초 안에 선택하세요
+<select>
+	<option>김밥</option>
+	<option>짜장면</option>
+	<option>냉면</option>
+	<option>비빔밥</option>
+	<option>돈까스</option>
+</select>
+</body>
+</html>

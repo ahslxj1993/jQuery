@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+
+<style>
+div {width:100px; height:100px}
+
+.red {background: red}
+.orange {background : orange}
+.yellow {background: yellow}
+</style>
+
+<script>
+	$(document).ready(function (){
+		//div 태그의 'background-color'속성의 값을 구해와서 변수 color 에 저장합니다
+		//세개의 div 태그중 첫번째 문서 객체의 스타일 속성을 가져옵니다.
+		var color = $('div').css('background-color');
+		
+		//콘솔에 출력합니다
+		console.log(color);
+	})
+</script>
+</head>
+<body>
+	<div class=red></div>
+	<div class=orange></div>
+	<div class=yellow></div>
+</body>
+</html>

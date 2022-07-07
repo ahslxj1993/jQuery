@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+문서객체 삽입
+
+ -->
+<script>
+$(document).ready(function (){
+	//변수선언
+	var h1 ='<h1>화요일</h1>';
+	var h2 ='<h1>수요일</h1>';
+	var h3 = '<h1>월요일</h1>'
+	var h4 ='<h1>목요일</h1>';
+	var h5='<h1>일요일<h1>'
+	//문서객체 추가
+	//h1, h2를 div태그의 마지막 자식에 추가
+	$('div').append(h1,h2);
+	
+	$('div').prepend(h3);
+	
+	$('div').after(h4);
+	
+	$('div').before(h5);
+})
+</script>
+
+</head>
+<body>
+	<div>내 뒤에 붙어</div>
+</body>
+</html>

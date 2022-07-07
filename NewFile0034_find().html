@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+
+<style>
+.descendants *{
+display : block;
+border : 2px solid lightgrey;
+color : lightgrey;
+padding : 5px;
+margin : 15px;
+}
+</style>
+
+<script>
+	$(document).ready(function(){
+		//선택한 요소의 후손중에서 span을 찾습니다
+		$('div').find('span').css({
+			'color':'red',
+			'border':'2px solid red'
+		})
+	})
+</script>
+
+</head>
+<body>
+	<div class="descendants" style="width: 500px;">
+		div (current element)
+		<p>
+			p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<p>
+			p (child)
+			<span>span (grandchild)</span>
+		</p>
+		<span>span(child)</span>
+	</div>
+
+</body>
+
+</html>

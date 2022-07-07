@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<style>
+.high-light-0{
+background:yellow
+}
+.high-light-1{
+background:orange
+}
+.high-light-2{
+background:blue
+}
+.high-light-3{
+background:green
+}
+.high-light-4{
+background:red
+}
+</style>
+<!-- 
+addClass() : 문서객체에 class 속성을 추가하는 메서드입니다
+removeClass() : 문서 객체에서 class 속성을 제거하는 메서드입니다
+ -->
+<script>
+$(document).ready(function () {
+	$('h1:eq(0)').addClass('high-light-0')
+	$('h1:eq(1)').addClass('high-light-1')
+	$('h1:eq(2)').addClass('high-light-2')
+	$('h1:eq(3)').addClass('high-light-3')
+	$('h1:eq(4)').addClass('high-light-4')
+})
+</script>
+</head>
+<body>
+<h1>item - 0</h1>
+<h1>item - 1</h1>
+<h1>item - 2</h1>
+<h1>item - 3</h1>
+<h1>item - 4</h1>
+</body>
+</html>

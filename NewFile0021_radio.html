@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function () {
+	setTimeout(function () {
+		var imagepath = $('input:checked').val();
+		alert('선택한 그림의 위치는 '+imagepath+" 입니다.")
+	}, 5000)
+});
+</script>
+</head>
+<body>
+<h3>선택한 그림 위치 출력</h3>
+<hr>
+<div>radio 버튼을 클릭하세요</div>
+<form>
+	<input type="radio" name="icon" value="img/image1.png">image1<br>
+	<input type="radio" name="icon" value="img/image2.png">image2<br>
+	<input type="radio" name="icon" value="img/image3.png">image3<br>
+</form>
+</body>
+</html>

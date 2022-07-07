@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+text() 메소드 : 문서 객체 내부의 글자와 관련된 기능을 수행한다
+형식)
+1.$(selector).text() : 선택자의 텍스트 노드 값을 가져옴
+2.$(selector).text(value) : 선택자의 택스트 노드의 값을 변경
+3.$(selector).text(function (index, text){})
+ -->
+<script>
+ $(document).ready(function (){
+	alert($('div').text())//div 엘리먼트의 모든 텍스트 노드값을 가져옵니다
+	console.log($('p').text()==='')//존재하지 않는 엘리먼트의 텍스트 노드값을 가져오는 경우 빈 문자열 입니다.
+ })
+</script>
+
+</head>
+<body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

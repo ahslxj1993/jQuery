@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+is() 메서드 : 문서 객체의 특성을 판별합니다
+예) is('.orange')는 orange 클래스 속성이 문서객체에 있는지 판별합니다
+ -->
+<script>
+	$(document).ready(function () {
+		$('h1').each(function (index, item) {
+			//h1  태그중 orange 클래스 속성이 있는 문서객체에 스타일을 적용합니다
+			if ($(item).is('.orange')){
+				$(item).css('background','orange');
+			}
+		})
+	})
+</script>
+
+</head>
+<body>
+<!-- h1 태그중 orange 클래스 속성이 있는 문서  객체에 스타일을 적용합니다 -->
+<h1 class="green orange">Header-0</h1>
+<h1>Header-1</h1>
+<h1 class="orange">Header-2</h1>
+<h2 class="orange">Header-3</h2>
+</body>
+</html>

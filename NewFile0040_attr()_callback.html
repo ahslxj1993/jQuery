@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+attr()메소드
+3.$(selector).attr(name, function(index, attr){});
+ -->
+<script>
+	$(document).ready(function () {
+		
+		$('img').attr('src', function(index, attrValue){
+			var s = "index : "+index+" , "+attrValue;
+			console.log(s);
+		});
+		});//ready
+</script>
+
+</head>
+<body>
+	<img src='img/image1.png' alt='image1.png'>
+	<img src='img/image2.png' alt='image2.png'>
+	<img src='img/image3.png' alt='image3.png'>
+</body>
+</html>

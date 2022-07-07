@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+jQuery 입력 양식 필터 선택자(1)
+input 태그의 type 속성에 따라 문서 객체를 선택할수있습니다.
+속성선택자 input[type:"text"]와 같은 의미로 input:text로 사용합니다.
+
+(1)요소:text (input 태그중 type속성이 text인 문서 객체를 선택합니다)
+(2)요소:submit (input 태그중 type속성이 submit인 문서 객체를 선택합니다)
+(3)요소:reset (input 태그중 type속성이 reset인 문서 객체를 선택합니다)
+ -->
+<script>
+ $(document).ready(function (){
+ 	
+	/*
+	$('input:text').val('홍길동');
+ 	$('input:text').css('background','orange');
+ 	$('input:text').css('color','green');
+ 	$('input:text').css('height','50px');
+ 	$('input:text').css('font-size','50px');
+ 	*/
+ 	
+ 	$('input:text').val('홍길동')
+ 					.css({
+ 						'background':'orange',
+ 						'color':'green',
+ 						'height':'50px',
+ 						'font-size':'50px'
+ 					})
+ })
+</script>
+</head>
+<body>
+    <input type="text" placeholder="이름">    
+</body>
+</html>

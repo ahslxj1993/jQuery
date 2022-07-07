@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+text() 메소드 : 문서 객체 내부의 글자와 관련된 기능을 수행한다
+형식)
+1.$(selector).text() : 선택자의 텍스트 노드 값을 가져옴
+2.$(selector).text(value) : 선택자의 택스트 노드의 값을 변경
+3.$(selector).text(function (index, text){})
+ -->
+<script>
+ $(document).ready(function (){
+	 var array =['MON','TUE','WED'];
+	$('div').text(function (index, text){
+		console.log("index="+index+", textnode="+text);
+		return array[index];
+		})
+	})
+</script>
+
+</head>
+<body>
+	<div>월요일</div>
+	<div>화요일</div>
+	<div>수요일</div>
+</body>
+</html>

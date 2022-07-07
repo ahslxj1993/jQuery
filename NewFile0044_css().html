@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+
+<style>
+div {width:100px; height:100px}
+
+.red {background: red}
+.orange {background : orange}
+.yellow {background: yellow}
+</style>
+<!-- 문 객체 스타일 검사 -->
+<script>
+	$(document).ready(function (){
+		var message='';
+		$('div').css('background-color',function (index,style){
+			message += index+ "번째  background-color 속성 값은"+style+'\n';
+		});
+		
+		console.log(message);
+	});
+</script>
+</head>
+<body>
+	<div class=red></div>
+	<div class=orange></div>
+	<div class=yellow></div>
+</body>
+</html>

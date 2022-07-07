@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+
+<style>
+body * {
+display : block;
+border: 20px solid lightrey;
+color : lightgrey;
+padding: 5px;
+margin : 15px;
+}
+</style>
+
+<script>
+ $(document).ready(function (){
+	 $('span').parent().css({
+		 'color':'red',
+		 'border':'2px solid red'
+	 })
+ })
+</script>
+
+</head>
+<body class="ancestors">body (great-great-grandparent)
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span - 나</span>
+      </li>
+    </ul>   
+  </div>
+</body>
+
+</html>
