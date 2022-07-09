@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+type 속성이 checkbox 와 radio 인 input태그의 상태를 변경하는 이벤트는 change입니다
+ -->
+<script>
+	$(document).ready(function () {
+		$('select').change(function (){
+				$('img').prop('src',$(this).val())
+			})
+		})
+</script>
+
+</head>
+<body>
+<h3>select 객체에서 선택한 그림 출력</h3>
+<hr>
+<div>select 를 선택하면 해당 이미지가 보입니다</div>
+<form>
+	<select id=icon>
+		<option value='img/image1.png'>image1</option>
+		<option value='img/image2.png'>image2</option>
+		<option value='img/image3.png'>image3</option>
+	</select><br>
+	<img id='iconImg' src="img/image2.png">
+</form>>	
+</body>
+</html>

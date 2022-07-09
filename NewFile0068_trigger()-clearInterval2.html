@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+trigger() : 이벤트를 강제로 발생시킵니다
+형식 -> trigger(eventname)
+ -->
+ 
+<style>
+input:hover{
+opacity:0.7;
+cursor:pointer;
+}
+
+#start {
+width: 100px;
+height : 30px;
+background-color:green;
+color : white;
+border:none;}
+
+#start:disabled, #end:disabled {
+cursor: not-allowed;
+background-color: gray;
+}
+
+#end {
+width: 100px;
+height : 30px;
+background-color:red;
+color : white;
+border:none;}
+
+</style>
+
+<script>
+	$(document).ready(function () {
+		
+		$('h1').click(function () {
+			$(this).html(function(index, html){
+				return html+"★"
+			})
+		})//click
+		
+		$('#end').attr('disabled',true);
+		
+		$('#start').on('click',function (){
+			$(this).attr('disabled',true).val('작동중...');
+			$('#end').attr('disabled',false);
+			start = setInterval(function () {
+				$('h1:last').trigger('click');
+				},1000);
+		})//click start button
+		
+		$('#end').on('click',function (){
+			clearInterval(start);
+			$(this).attr('disabled',true);
+			$('#start').attr('disabled',false).val('트리거시작');
+		})//click end button
+		
+		
+	})//ready
+</script>
+
+</head>
+<body>
+	<h1>Start: </h1>
+	<h1>Start: </h1>
+	<input type=button value=트리거시작 id=start>
+	<input type=button value=트리거종료 id=end>
+</body>
+</html>

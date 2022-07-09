@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+
+<style>
+	* {
+	margin: 5px; padding: 5px;
+	border : 3px solid black;
+	}
+</style>
+
+
+<script>
+	
+	$(document).ready(function (){
+		$('a').click(function (){
+			$(this).css('background-color','blue');
+			event.preventDefault(); // a태그 기본 이벤트 제거합니다
+									// 즉, 이동이 되지 않습니다
+			event.stopPropagation();//a태그 선택시 div태그의 이벤트 전달을 제거합니다
+		})
+		/*
+		event.stopPropagation();
+		event.preventDefault();
+	
+		두가지 메서드를 jQuery에서는 return false로 적용합니다
+		*/
+		$('div').click(function (event){
+			$(this).css('background','orange');
+		})
+	})
+</script>
+
+</head>
+<body>
+	<div>
+		<a href="NewFile0068_trigger()-clearInterval2.html">트리거 예제</a> div태그
+	</div>
+</body>
+</html>

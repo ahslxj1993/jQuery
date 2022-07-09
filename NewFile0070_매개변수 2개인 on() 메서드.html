@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+매개변수가 2개일때는 새로 추가된 p에 대해서는 이벤트가 발생되지 않습니다
+ -->
+<script>
+	
+	$(document).ready(function (){
+		var count =0;
+		$('p').on('click',function(){
+			$(this).after("<p> 추가된 paragraph"+ count++ +"</p>")
+		})
+	})
+</script>
+
+</head>
+<body>
+	<p>Click me</p>
+	<span>end</span>
+	
+
+</body>
+</html>

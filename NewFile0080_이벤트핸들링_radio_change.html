@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<!-- 
+type 속성이 checkbox 와 radio 인 input태그의 상태를 변경하는 이벤트는 change입니다
+ -->
+<script>
+	$(document).ready(function () {
+		$('#all-check').change(function () {
+			console.log($(this).is(':checked'));
+			$('#check-item>input:checkbox').prop('checked', $(this).is(':checked'));
+		})//all check change function
+	})//document ready
+</script>
+
+</head>
+<body>
+	<label><input type=checkbox id=all-check></label>
+	<div id=check-item>
+		<input type=checkbox>
+		<label>A Option</label>
+		<input type=checkbox>
+		<label>B Option</label>
+		<input type=checkbox>
+		<label>C Option</label>
+	</div>
+</body>
+</html>
