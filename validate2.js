@@ -79,7 +79,7 @@ $(document).ready(function() {
 		}
 
 		//우편번호 공백 유효성 검사
-		if (post1.value == "") {
+		if ($('#post1').val() == "") {
 			alert("우편번호를 입력해주세요");
 			post1.focus();
 			return false;
@@ -87,14 +87,14 @@ $(document).ready(function() {
 
 
 		//주소 공백 유효성 검사
-		if (address.value == "") {
+		if ($('#address').val() == "") {
 			alert("주소를 입력헤주세요");
 			address.focus();
 			return false;
 		}
 
 		//자기소개 공백 유효성 검사
-		if (intro.value == "") {
+		if ($('#intro').val() == "") {
 			alert("자기소개를 입력해주세요");
 			intro.focus();
 			return false;
